@@ -1,23 +1,29 @@
 import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Component from './Component';
+import State from './State';
+import ClickEvent from './ClickEvent';
+import IterationSample from './IterationSample';
 
 function App() {
+  const name="리액트";
+  const style={
+      backgroundColor:"skyblue",
+      color:"white",
+      fontSize:"48px",
+      fontWeight:"bold",
+      padding:16,
+      textAlign:"center",
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div style={style}>{name}</div>
+      <Component name={"멍청이"}><br/>{name}</Component>
+      <br/><br/><br/><br/>
+      <State  />
+      <ClickEvent />
+      <IterationSample />
     </div>
   );
 }
