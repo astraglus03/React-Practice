@@ -24,6 +24,7 @@ function App() {
       <State  />
       <ClickEvent />
       <IterationSample />
+      리액트 연습중
     </div>
   );
 }

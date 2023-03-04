@@ -7,6 +7,7 @@ const Component = ({ name, children }) => {
       내 이름은 {name}입니다.
       {/* 태그와 태그 사이에 값을 넣어줄때에는 children 사용 */}
       {children}
+      리액트 연습중
     </div>
   );
 };

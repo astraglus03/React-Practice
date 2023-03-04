@@ -54,6 +54,7 @@ const ClickEvent = () => {
       />
 
       <button onClick={onClickSend}>보내기</button>
+      리액트 연습중
     </div>
   );
 };

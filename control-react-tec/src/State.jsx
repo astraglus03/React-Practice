@@ -21,6 +21,7 @@ const State = () => {
       <button style={{ color: "blue" }} onClick={() => setColor("blue")}>
         파랑
       </button>
+      리액트 연습중
     </div>
   );
 };
