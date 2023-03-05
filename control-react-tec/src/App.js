@@ -22,7 +22,7 @@ function App() {
       <Component name={"멍청이"}><br/>{name}</Component>
       <br/><br/><br/><br/>
       <State  />
-      <ClickEvent />
+      <ClickEvent /><br/><br/><br/><br/>
       <IterationSample />
     </div>
   );
