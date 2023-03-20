@@ -1,3 +1,4 @@
+import produce from 'immer';
 import React, { useCallback, useRef, useState } from 'react';
 
 const App = () => {
@@ -9,7 +10,12 @@ const App = () => {
   // input 수정을 위한 함수
   const onChange=useCallback(e=>{
     const {name,value}=e.target;
-    setForm({...form,[name]:[value]})
+    setForm(produce(draft=>{
+      // produce함수가 immer라이브러리에서 사용 첫번째 파라미터는 수정하고싶은상태 
+      //첫번째 파라미터가 함수형태라면 업데이트 함수를 반환하면됨 ex) form,draft -> draft
+      // 두번째 파라미터는 상태를 어떻게 업데이트 할지 정의하는 함수
+      draft[name]=value;
+    }))
   },[form])
   // form 등록을 위한 함수
   const onSubmit=useCallback(e=>{
@@ -20,7 +26,9 @@ const App = () => {
       username:form.username
     };
     // array에 새 항목 등록
-    setData({...data, array:data.array.concat(info)});
+    setData(produce(draft=>{
+      draft.array.push(info);
+    }));
     // form 초기화
     setForm({
       name:"",
@@ -31,9 +39,9 @@ const App = () => {
 
   // 항목을 삭제하는 함수
   const onRemove=useCallback(id=>{
-    setData({
-      ...data,array:data.array.filter(info=> info.id !==id)
-    })
+    setData(produce(draft=>{
+      draft.array.splice(draft.array.findIndex(info=> info.id ===id),1)
+    }))
   },[data])
 
 
