@@ -25,11 +25,14 @@ import DarkOrLight from './Chapter_14/DarkOrLight';
 import Blocks from './Chapter_15/Blocks';
 
   const root = ReactDOM.createRoot(document.getElementById('root'));
-  root.render(
-    <React.StrictMode>
-      <Blocks />
-    </React.StrictMode>
-  );
+
+  setInterval(() => {
+    root.render(
+      <React.StrictMode>
+        <UserStatus />
+      </React.StrictMode>
+    );
+  }, 1000);
 
 
 // If you want to start measuring performance in your app, pass a function

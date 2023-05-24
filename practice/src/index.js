@@ -12,13 +12,13 @@ import FocusButton from './Practice_03/FocusButton';
 import ConfirmButton from './Practice_03/ConfirmButton';
 import DarkOrLight from './Practice_03/DarkOrLight';
 import Practice from './Practice_03/practice';
-
+import Yeonjae from './Practice_03/Yeonjae';
 
 
   const root = ReactDOM.createRoot(document.getElementById('root'));
   root.render(
     <React.StrictMode>
-      <Practice />
+      <ConfirmDialog />
     </React.StrictMode>
   );
 

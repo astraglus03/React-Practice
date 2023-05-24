@@ -3,11 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Example from './Component/Example';
+import Example1 from './Component/Example1';
+import Example2 from './Component/Example2';
+import MapFunction from './Component/MapFunction';
+import AddDataMap from './Component/AddDataMap';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <AddDataMap />
   </React.StrictMode>
 );
 
